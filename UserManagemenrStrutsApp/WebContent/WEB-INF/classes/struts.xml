@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.mapper.action.prefix.enabled" value="true" /> <!-- (Multiple submits) override form action, if child action is added -->
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" /> <!--  multiple methods in single class -->
+	
+	<package name="UserManagemenrStrutsApp" extends="struts-default">
+		<action name="index">
+			<result>/index.jsp</result>
+		</action>
+		<action name="home">
+			<result>/login.jsp</result>
+		</action>
+		<action name="register" class="main.RegisterAction">
+			<result name="success">/welcomeMsg.jsp</result>
+			<result name="error">/error.jsp</result>
+			<result name="input">/login.jsp</result>
+		</action>
+		<action name="login" class="main.LoginAction">
+			<result name="success">/welcomeMsg.jsp</result>
+			<result name="error">/error.jsp</result>
+			<result name="input">/login.jsp</result>
+		</action>
+		<action name="test">
+			<result>/index.jsp</result>
+		</action>
+	</package>
+	<package name="tags" extends="struts-default">
+		<action name="learn">
+			<result>/jsp/learn.jsp</result>
+		</action>
+		<action name="dataTags">
+			<result>/jsp/tags/dataTags.jsp</result>
+		</action>
+		<action name="controlTags">
+			<result>/jsp/tags/controlTags.jsp</result>
+		</action>
+	</package>
+</struts>    

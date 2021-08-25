@@ -1,0 +1,35 @@
+@charset "UTF-8";
+.login-content{
+	margin:auto;
+	width: auto;
+	position: relative;
+    top: 30%;
+}
+.title{
+	width: fit-content;
+    color: darkcyan;
+    margin: 5px auto;
+}
+.login-form{
+	border: 2px solid transparent;
+	padding: 5px;
+	margin: auto;
+	width: fit-content;
+    height: 200px; 
+    background: linear-gradient(64deg, #cddc39, #ffeb3b,#ffc107, #ff9800);
+    box-shadow: 0 6px 6px -3px rgba(0,0,0,.2), 0 10px 14px 1px rgba(0,0,0,.14), 0 4px 18px 3px rgba(0,0,0,.12);
+}
+.login-form form table.wwFormTable{
+	height: 100%;
+    font-size: 18px;	
+}
+.login-form form table.wwFormTable .tdErrorMessage {
+	color: red;	
+}
+.login-form .form-submit-btn{
+	margin: 0 40%;
+}
+.errorDiv{
+	color:red;
+	margin: 0 40%;
+}
